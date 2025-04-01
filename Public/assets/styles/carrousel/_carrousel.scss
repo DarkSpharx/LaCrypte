@@ -1,0 +1,134 @@
+#carrousel {
+    padding: 0rem;
+}
+@media only screen and (max-width: 768px) {
+    #carrousel {
+        padding: 0;
+    }
+    
+}
+#carrousel-content {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    @media only screen and (max-width: 768px) {
+        border-left: none;
+        border-right: none;
+    }
+    height: 50vh;
+    min-height: 300px;
+}
+
+.carrousel {
+    display: flex;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carrousel-slide {
+    position: relative;
+    min-width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.carrousel-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.carrousel-caption {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%) ;
+    text-align: center;
+    padding: 0.8rem;
+    color: $text-color-dark;
+    background: #fc466b81;
+    font-weight: bolder;
+    backdrop-filter: blur(10px);
+}
+
+#carrousel-controls {
+    position: absolute;
+    bottom: 1rem;
+    width: 100%;
+    left: 50%;
+    transform: translateY(-50%) ;
+    transform: translateX(-50%) ;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+#carrousel-controls button {
+    color: $text-color-dark;
+    background: #21212181;
+    font-size: 1rem;
+    border: none;
+    border-radius: 0%;
+    padding: 1rem;
+    margin: 0;
+    backdrop-filter: blur(1rem);
+}
+
+#carrousel-controls button:hover {
+    color: $text-color-dark;
+    background: $pink;
+}
+
+#lightbox {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 1000000;
+    top: 0;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+    // background-color: #21212181;
+    backdrop-filter: blur(10px);
+}
+
+#lightbox-img {
+    width: 50%;
+}
+
+.close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    color: $text-color-dark;
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover, .close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Ajustements responsive */
+@media (max-width: 768px) {
+  .carousel-caption {
+    font-size: 0.9rem;
+    padding: 0.3rem 0.8rem;
+  }
+  .carousel-controls button {
+    padding: 0.3rem 0.8rem;
+    font-size: 0.8rem;
+  }
+  #lightbox-img {
+    width: 90%;
+  }
+}

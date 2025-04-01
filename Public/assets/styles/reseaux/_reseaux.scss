@@ -1,0 +1,49 @@
+#reseaux {
+    position: fixed;
+    left: 0;
+    top: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    border-radius: 0 1rem 1rem 0;
+    & a {
+        color: $text-color-light;
+        & i {
+            cursor: pointer;
+            padding: 1rem;
+        }
+    }
+    & a:hover {
+        opacity: 0.5;
+    }
+}
+#reseaux-mobile {
+    display: none;
+}
+
+@media only screen and (max-width: 576px) {
+    #reseaux {
+        display: none;
+    }
+    #reseaux-mobile {
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    display: flex;
+    border-radius: 1rem 1rem 0 0;
+    & a {
+        & i {
+            padding: 1rem;
+        }
+    }
+    & a:hover {
+        opacity: 0.5;
+    }
+}
+}

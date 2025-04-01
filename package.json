@@ -1,0 +1,18 @@
+{
+  "name": "laccypte",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "lacrypte, crypto, investissement, portfeuille, crytomonnaie"
+  ],
+  "author": "Frédéric ARNOULD",
+  "license": "ISC",
+  "description": "Le site officiel de la cryptomonnaie LaCrypte",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^5.1.0"
+  }
+}

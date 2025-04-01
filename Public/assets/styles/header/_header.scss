@@ -1,0 +1,163 @@
+header {
+    z-index: 9999;
+    position: fixed;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    // backdrop-filter: blur(10px);
+    & nav {
+        max-width: 1024px;
+        margin: 1rem auto;
+        display: flex;
+        justify-content: space-between;
+        align-content: center;
+        align-items: center;
+        & a {
+            text-decoration: none;
+            & #logo_long {
+                width: 100%;
+                height: 2rem;
+            }
+        }
+        & #nav {
+            display: flex;
+            flex-grow: 1;
+            justify-content: space-around;
+            & ul {
+                display: flex;
+                flex-grow: 1;
+                justify-content: space-around;
+                & li {
+                    & a:after {
+                        content: '';
+                        position: absolute;
+                        transform: scaleX(0);
+                        width: 100%;
+                        height: 2px;
+                        background-color: currentColor;
+                        transition: transform 0.25s ease-out;
+                        bottom: 0;
+                        left: 0;
+                    }
+                    & a {
+                        position: relative;
+                        text-decoration: none;
+                        & i {
+                        display: none;
+                        }
+                    }
+                    & a:hover {
+                        opacity: 1;
+                        // backdrop-filter: blur(10px);
+                    }
+                    & a:hover:after {
+                        transform: scaleX(1.1);
+                    }
+                }
+            }
+        }
+        & #toggle-nav {
+            display: none;  
+        }
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    header {
+        & nav {
+            // padding: 1rem;
+            // display: flex;
+            // justify-content: space-between;
+            & #nav {
+                & ul {
+                    & li {
+                        & a:after {
+                            content: '';
+                            position: absolute;
+                            transform: scaleX(0);
+                            width: 100%;
+                            height: 2px;
+                            background-color: currentColor;
+                            transition: transform 0.25s ease-out;
+                            bottom: 0;
+                            left: 0;
+                        }
+                        & a {
+                            position: relative;
+                            text-decoration: none;
+                        }
+                        & a:hover {
+                            color: $pink !important;
+                        }
+                        & a:hover:after {
+                            transform: scaleX(1);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// tablette responsiv
+@media only screen and (max-width: 768px) {
+    header {
+        & nav {
+            margin: 0;
+            & #logo_long {
+                padding: 1rem;
+            }
+            & #nav {
+                position: fixed;
+                right: 1rem;
+                display: flex;
+                flex-direction: column;
+                width: 50vw;
+                max-width: 200px;
+                min-height: 50vh;
+                min-height: calc(var(--vh, 1vh)*50);
+                height: 50%;
+                top: 50%;
+                transform: translate(100vw, -50%);
+                transition: transform 0.5s;
+                border-radius: 1rem;
+                padding: 1rem;
+                & ul {
+                    flex-direction: column;
+                    width: fit-content; 
+                    // margin: auto;
+                    & li {
+                        & a {
+                            font-weight: bold;
+                            display: flex;
+                            width: fit-content;
+                            padding: 8px 0;
+                            & i {
+                                display: block;
+                                margin-right: 1rem;
+                            }
+                        }
+                    }
+                }
+                & i[data-theme-toggler] {
+                    position: absolute;
+                    top: 1rem;
+                    right: 1rem;
+                }
+            }
+            & #nav.mobile {
+                transform: translate(0, -50%);
+            }
+            & #toggle-nav {
+                display: block;
+                padding: 1rem;
+                font-size: 2rem;
+            }
+        }
+    }
+}
+
+// mobile responsiv
+@media only screen and (max-width: 576px) {
+
+}
