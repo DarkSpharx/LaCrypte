@@ -87,10 +87,11 @@ button {
     color: $text-color-dark;
     font-size: 2rem;
     padding: 0.5rem;
+    // mix-blend-mode: exclusion;
 }
 
 main {
-    & section#hero-header {
+    & #hero-header {
         background: $degrade;
         width: 100%;
         & #bg-hero {
@@ -138,7 +139,7 @@ main {
                 }
             }
         }
-    & #projet, #offre {
+    & #projet, #offre, #contact {
         min-height: 100vh;
         min-height: calc(var(--vh, 1vh)*100);
     }
@@ -150,6 +151,56 @@ main {
     background-position:center;
     background-attachment: fixed;
     background-size: cover;
+}
+
+#contact {
+    background-color: $bg-color-dark;
+    height: 100%;
+    .container {
+        width: 300px;
+        margin: 50px auto;
+        background: white;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        h1 {
+            text-align: center;
+        }
+        & #contactForm {
+            z-index: 1000;
+            label {
+                margin-top: 10px;
+                display: block;
+            }
+            
+            input, textarea {
+                width: 100%;
+                padding: 8px;
+                margin: 5px 0 15px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+            }
+            
+            button {
+                width: 100%;
+                padding: 10px;
+                background-color: #5cb85c;
+                color: white;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+            }
+            
+            button:hover {
+                background-color: #4cae4c;
+            }
+            
+            #responseMessage {
+                margin-top: 15px;
+                text-align: center;
+            }
+        }
+    }
 }
 
 // DarkMode responsiv

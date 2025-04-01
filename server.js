@@ -9,6 +9,9 @@ app.use(express.static(path.join(__dirname, "public"))); // => /front/public/
 app.get("/", (req, res) => {
   res.render("index");
 });
+app.get("/contact", (req, res) => {
+  res.render("pages/contact");
+});
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {

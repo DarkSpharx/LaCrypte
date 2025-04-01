@@ -42,16 +42,17 @@ header {
                     & a {
                         position: relative;
                         text-decoration: none;
+                        font-weight: bold;
                         & i {
                         display: none;
                         }
                     }
                     & a:hover {
-                        opacity: 1;
+                        opacity: 0.5;
                         // backdrop-filter: blur(10px);
                     }
                     & a:hover:after {
-                        transform: scaleX(1.1);
+                        transform: scaleX(1);
                     }
                 }
             }
@@ -65,9 +66,7 @@ header {
 @media only screen and (max-width: 1024px) {
     header {
         & nav {
-            // padding: 1rem;
-            // display: flex;
-            // justify-content: space-between;
+            margin: 1rem;
             & #nav {
                 & ul {
                     & li {
@@ -103,10 +102,7 @@ header {
 @media only screen and (max-width: 768px) {
     header {
         & nav {
-            margin: 0;
-            & #logo_long {
-                padding: 1rem;
-            }
+            margin: 1rem;
             & #nav {
                 position: fixed;
                 right: 1rem;
@@ -150,14 +146,13 @@ header {
             }
             & #toggle-nav {
                 display: block;
-                padding: 1rem;
                 font-size: 2rem;
             }
         }
     }
 }
 
-// mobile responsiv
-@media only screen and (max-width: 576px) {
+// // mobile responsiv
+// @media only screen and (max-width: 576px) {
 
-}
+// }

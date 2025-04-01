@@ -4,7 +4,10 @@
   "main": "index.js",
   "scripts": {
     "sass": "sass --watch styles:public/assets/styles",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "nodemon server.js",
+    "browsersync": "browser-sync start --proxy http://localhost:3000 --files \"public/assets/styles/**/*.css,public/assets/js/**/*.js,views/**/*.ejs\"",
+    "start": "concurrently \"npm run sass\" \"npm run server\" \"npm run browsersync\""
   },
   "keywords": [
     "lacrypte, crypto, investissement, portfeuille, crytomonnaie"
@@ -17,6 +20,9 @@
     "express": "^5.1.0"
   },
   "devDependencies": {
+    "browser-sync": "^3.0.3",
+    "concurrently": "^9.1.2",
+    "nodemon": "^3.1.9",
     "sass": "^1.86.1"
   }
 }

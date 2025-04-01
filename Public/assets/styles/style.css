@@ -1,3 +1,7 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
 html,
 body,
 div,
@@ -149,19 +153,15 @@ html[data-theme=light] {
   background-color: #ececec;
   color: #212121;
 }
-
 html[data-theme=light] a {
   color: #212121;
 }
-
 html[data-theme=light] header nav a #logo_long {
   fill: #212121;
 }
-
 html[data-theme=light] header nav a #logo_long:hover {
   opacity: 0.5;
 }
-
 html[data-theme=light] header nav #nav i[data-theme-toggler] {
   color: #212121;
 }
@@ -170,19 +170,15 @@ html[data-theme=dark] {
   background-color: #212121;
   color: #ececec;
 }
-
 html[data-theme=dark] a {
   color: #ececec;
 }
-
 html[data-theme=dark] header nav a #logo_long {
   fill: #ececec;
 }
-
 html[data-theme=dark] header nav a #logo_long:hover {
   opacity: 0.5;
 }
-
 html[data-theme=dark] header nav #nav i[data-theme-toggler] {
   color: #ececec;
 }
@@ -191,7 +187,6 @@ button {
   padding: 1rem;
   margin: 1rem;
   border-radius: 1rem;
-  width: -moz-fit-content;
   width: fit-content;
   cursor: pointer;
   border: none;
@@ -210,12 +205,11 @@ button {
   padding: 0.5rem;
 }
 
-main section#hero-header {
+main #hero-header {
   background: linear-gradient(50deg, rgb(79, 28, 100) 0%, rgb(252, 70, 107) 50%, rgb(33, 211, 237) 100%);
   width: 100%;
 }
-
-main section#hero-header #bg-hero {
+main #hero-header #bg-hero {
   width: 100%;
   min-height: 100vh;
   display: flex;
@@ -224,8 +218,7 @@ main section#hero-header #bg-hero {
   align-items: center;
   align-content: center;
 }
-
-main section#hero-header #bg-hero h1 {
+main #hero-header #bg-hero h1 {
   text-align: center;
   font-family: titreh1;
   font-size: 5rem;
@@ -233,8 +226,7 @@ main section#hero-header #bg-hero h1 {
   background: rgba(255, 255, 255, 0.3);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
-
-main section#hero-header #bg-hero div#content {
+main #hero-header #bg-hero div#content {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -243,30 +235,25 @@ main section#hero-header #bg-hero div#content {
   padding: 1rem;
   gap: 1rem;
 }
-
-main section#hero-header #bg-hero div#content h2 {
+main #hero-header #bg-hero div#content h2 {
   font-family: titreh1;
   text-align: center;
   font-size: 3rem;
   padding: 1rem;
   font-weight: lighter;
 }
-
-main section#hero-header #bg-hero div#content button {
+main #hero-header #bg-hero div#content button {
   font-size: 1.5rem;
   color: #212121;
   background: #ececec;
   box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
-
-main section#hero-header #bg-hero div#content button:hover {
+main #hero-header #bg-hero div#content button:hover {
   background-color: #212121;
   color: #ececec;
   box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
-
-main #projet,
-main #offre {
+main #projet, main #offre, main #contact {
   min-height: 100vh;
   min-height: calc(var(--vh, 1vh) * 100);
 }
@@ -277,6 +264,52 @@ main #offre {
   background-position: center;
   background-attachment: fixed;
   background-size: cover;
+}
+
+#contact {
+  background-color: #212121;
+  height: 100%;
+}
+#contact .container {
+  width: 300px;
+  margin: 50px auto;
+  background: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+#contact .container h1 {
+  text-align: center;
+}
+#contact .container #contactForm {
+  z-index: 1000;
+}
+#contact .container #contactForm label {
+  margin-top: 10px;
+  display: block;
+}
+#contact .container #contactForm input, #contact .container #contactForm textarea {
+  width: 100%;
+  padding: 8px;
+  margin: 5px 0 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+#contact .container #contactForm button {
+  width: 100%;
+  padding: 10px;
+  background-color: #5cb85c;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+#contact .container #contactForm button:hover {
+  background-color: #4cae4c;
+}
+#contact .container #contactForm #responseMessage {
+  margin-top: 15px;
+  text-align: center;
 }
 
 @media only screen and (max-width: 768px) {
@@ -343,7 +376,6 @@ header {
   background: rgba(255, 255, 255, 0.3);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
-
 header nav {
   max-width: 1024px;
   margin: 1rem auto;
@@ -352,28 +384,23 @@ header nav {
   align-content: center;
   align-items: center;
 }
-
 header nav a {
   text-decoration: none;
 }
-
 header nav a #logo_long {
   width: 100%;
   height: 2rem;
 }
-
 header nav #nav {
   display: flex;
   flex-grow: 1;
   justify-content: space-around;
 }
-
 header nav #nav ul {
   display: flex;
   flex-grow: 1;
   justify-content: space-around;
 }
-
 header nav #nav ul li a:after {
   content: "";
   position: absolute;
@@ -385,29 +412,28 @@ header nav #nav ul li a:after {
   bottom: 0;
   left: 0;
 }
-
 header nav #nav ul li a {
   position: relative;
   text-decoration: none;
+  font-weight: bold;
 }
-
 header nav #nav ul li a i {
   display: none;
 }
-
 header nav #nav ul li a:hover {
-  opacity: 1;
+  opacity: 0.5;
 }
-
 header nav #nav ul li a:hover:after {
-  transform: scaleX(1.1);
+  transform: scaleX(1);
 }
-
 header nav #toggle-nav {
   display: none;
 }
 
 @media only screen and (max-width: 1024px) {
+  header nav {
+    margin: 1rem;
+  }
   header nav #nav ul li a:after {
     content: "";
     position: absolute;
@@ -432,10 +458,7 @@ header nav #toggle-nav {
 }
 @media only screen and (max-width: 768px) {
   header nav {
-    margin: 0;
-  }
-  header nav #logo_long {
-    padding: 1rem;
+    margin: 1rem;
   }
   header nav #nav {
     position: fixed;
@@ -455,13 +478,11 @@ header nav #toggle-nav {
   }
   header nav #nav ul {
     flex-direction: column;
-    width: -moz-fit-content;
     width: fit-content;
   }
   header nav #nav ul li a {
     font-weight: bold;
     display: flex;
-    width: -moz-fit-content;
     width: fit-content;
     padding: 8px 0;
   }
@@ -479,30 +500,26 @@ header nav #toggle-nav {
   }
   header nav #toggle-nav {
     display: block;
-    padding: 1rem;
     font-size: 2rem;
   }
 }
 #reseaux {
   position: fixed;
   left: 0;
-  top: 50%;
+  top: 33%;
   background: rgba(255, 255, 255, 0.3);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
   border-radius: 0 1rem 1rem 0;
 }
-
 #reseaux a {
   color: #212121;
 }
-
 #reseaux a i {
   cursor: pointer;
   padding: 1rem;
 }
-
 #reseaux a:hover {
   opacity: 0.5;
 }
@@ -538,7 +555,6 @@ header nav #toggle-nav {
   width: 100%;
   background: linear-gradient(50deg, rgb(79, 28, 100) 0%, rgb(252, 70, 107) 50%, rgb(33, 211, 237) 100%);
 }
-
 #crypto h2 {
   font-family: titreh1;
   text-align: center;
@@ -546,13 +562,11 @@ header nav #toggle-nav {
   padding: 1rem;
   font-weight: lighter;
 }
-
 #crypto h3 {
   color: #4f1c64;
   font-size: 1.5rem;
   font-family: titreh1;
 }
-
 #crypto span {
   color: #fc466b;
   font-size: 1rem;
@@ -566,7 +580,6 @@ header nav #toggle-nav {
   gap: 1rem;
   grid-template-columns: repeat(1, 1fr);
 }
-
 @media (min-width: 768px) {
   #content-games {
     padding: 100px 1rem 0 1rem;
@@ -580,7 +593,6 @@ header nav #toggle-nav {
     padding: 40px 0 1rem 0;
   }
   #content-games .game-card img:nth-child(2) {
-    -o-object-fit: cover;
     object-fit: cover;
     flex-grow: 1;
     overflow: hidden;
@@ -599,7 +611,6 @@ header nav #toggle-nav {
     padding: 50px 0 1rem 0;
   }
   #content-games .game-card img:nth-child(2) {
-    -o-object-fit: cover;
     object-fit: cover;
     flex-grow: 1;
   }
@@ -614,24 +625,19 @@ header nav #toggle-nav {
   border: 1px solid #ccc;
   border-radius: 0;
 }
-
 #content-games .game-card div {
   padding: 70px 0 1rem 0;
 }
-
 #content-games .game-card img:nth-child(2) {
-  -o-object-fit: cover;
   object-fit: cover;
   flex-grow: 1;
   overflow: hidden;
   height: 250px;
 }
-
 #content-games .game-card img:nth-child(3) {
   border-radius: 50%;
   height: 150px;
   width: 150px;
-  -o-object-fit: cover;
   object-fit: cover;
   position: absolute;
   top: 0;
@@ -655,13 +661,13 @@ header nav #toggle-nav {
   height: 50vh;
   min-height: 300px;
 }
-
 @media only screen and (max-width: 768px) {
   #carrousel-content {
     border-left: none;
     border-right: none;
   }
 }
+
 .carrousel {
   display: flex;
   height: 100%;
@@ -679,7 +685,6 @@ header nav #toggle-nav {
   display: block;
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
   object-fit: cover;
   cursor: pointer;
 }
@@ -695,7 +700,6 @@ header nav #toggle-nav {
   color: #ececec;
   background: rgba(252, 70, 107, 0.5058823529);
   font-weight: bolder;
-  -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
 }
 
@@ -721,7 +725,6 @@ header nav #toggle-nav {
   border-radius: 0%;
   padding: 1rem;
   margin: 0;
-  -webkit-backdrop-filter: blur(1rem);
   backdrop-filter: blur(1rem);
 }
 
@@ -740,7 +743,6 @@ header nav #toggle-nav {
   left: 0;
   justify-content: center;
   align-items: center;
-  -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
 }
 
@@ -758,8 +760,7 @@ header nav #toggle-nav {
   cursor: pointer;
 }
 
-.close:hover,
-.close:focus {
+.close:hover, .close:focus {
   color: #bbb;
   text-decoration: none;
   cursor: pointer;
