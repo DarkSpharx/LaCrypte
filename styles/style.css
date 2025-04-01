@@ -145,45 +145,37 @@ html {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-html[data-theme=light] {
+html[data-theme="light"] {
   background-color: #ececec;
   color: #212121;
 }
-
-html[data-theme=light] a {
+html[data-theme="light"] a {
   color: #212121;
 }
-
-html[data-theme=light] header nav a #logo_long {
+html[data-theme="light"] header nav a #logo_long {
   fill: #212121;
 }
-
-html[data-theme=light] header nav a #logo_long:hover {
+html[data-theme="light"] header nav a #logo_long:hover {
   opacity: 0.5;
 }
-
-html[data-theme=light] header nav #nav i[data-theme-toggler] {
+html[data-theme="light"] header nav #nav i[data-theme-toggler] {
   color: #212121;
 }
 
-html[data-theme=dark] {
+html[data-theme="dark"] {
   background-color: #212121;
   color: #ececec;
 }
-
-html[data-theme=dark] a {
+html[data-theme="dark"] a {
   color: #ececec;
 }
-
-html[data-theme=dark] header nav a #logo_long {
+html[data-theme="dark"] header nav a #logo_long {
   fill: #ececec;
 }
-
-html[data-theme=dark] header nav a #logo_long:hover {
+html[data-theme="dark"] header nav a #logo_long:hover {
   opacity: 0.5;
 }
-
-html[data-theme=dark] header nav #nav i[data-theme-toggler] {
+html[data-theme="dark"] header nav #nav i[data-theme-toggler] {
   color: #ececec;
 }
 
@@ -211,10 +203,14 @@ button {
 }
 
 main section#hero-header {
-  background: linear-gradient(50deg, rgb(79, 28, 100) 0%, rgb(252, 70, 107) 50%, rgb(33, 211, 237) 100%);
+  background: linear-gradient(
+    50deg,
+    rgb(79, 28, 100) 0%,
+    rgb(252, 70, 107) 50%,
+    rgb(33, 211, 237) 100%
+  );
   width: 100%;
 }
-
 main section#hero-header #bg-hero {
   width: 100%;
   min-height: 100vh;
@@ -224,7 +220,6 @@ main section#hero-header #bg-hero {
   align-items: center;
   align-content: center;
 }
-
 main section#hero-header #bg-hero h1 {
   text-align: center;
   font-family: titreh1;
@@ -233,7 +228,6 @@ main section#hero-header #bg-hero h1 {
   background: rgba(255, 255, 255, 0.3);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
-
 main section#hero-header #bg-hero div#content {
   display: flex;
   flex-direction: column;
@@ -243,7 +237,6 @@ main section#hero-header #bg-hero div#content {
   padding: 1rem;
   gap: 1rem;
 }
-
 main section#hero-header #bg-hero div#content h2 {
   font-family: titreh1;
   text-align: center;
@@ -251,20 +244,25 @@ main section#hero-header #bg-hero div#content h2 {
   padding: 1rem;
   font-weight: lighter;
 }
-
 main section#hero-header #bg-hero div#content button {
   font-size: 1.5rem;
   color: #212121;
   background: #ececec;
-  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
+    rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
+    rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px,
+    rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px,
+    rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
-
 main section#hero-header #bg-hero div#content button:hover {
   background-color: #212121;
   color: #ececec;
-  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
+    rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
+    rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px,
+    rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px,
+    rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
-
 main #projet,
 main #offre {
   min-height: 100vh;
@@ -280,36 +278,36 @@ main #offre {
 }
 
 @media only screen and (max-width: 768px) {
-  html[data-theme=light] header nav #nav {
+  html[data-theme="light"] header nav #nav {
     background-color: #212121;
   }
-  html[data-theme=light] header nav #nav ul li a {
+  html[data-theme="light"] header nav #nav ul li a {
     color: #ececec;
   }
-  html[data-theme=light] header nav #nav i[data-theme-toggler] {
+  html[data-theme="light"] header nav #nav i[data-theme-toggler] {
     color: #ececec;
     cursor: pointer;
   }
-  html[data-theme=light] header nav #nav i[data-theme-toggler]:hover {
+  html[data-theme="light"] header nav #nav i[data-theme-toggler]:hover {
     opacity: 0.5;
   }
-  html[data-theme=light] #reseaux a i {
+  html[data-theme="light"] #reseaux a i {
     color: #212121;
   }
-  html[data-theme=dark] header nav #nav {
+  html[data-theme="dark"] header nav #nav {
     background-color: #ececec;
   }
-  html[data-theme=dark] header nav #nav ul li a {
+  html[data-theme="dark"] header nav #nav ul li a {
     color: #212121;
   }
-  html[data-theme=dark] header nav #nav i[data-theme-toggler] {
+  html[data-theme="dark"] header nav #nav i[data-theme-toggler] {
     color: #212121;
     cursor: pointer;
   }
-  html[data-theme=dark] header nav #nav i[data-theme-toggler]:hover {
+  html[data-theme="dark"] header nav #nav i[data-theme-toggler]:hover {
     opacity: 0.5;
   }
-  html[data-theme=dark] #reseaux a i {
+  html[data-theme="dark"] #reseaux a i {
     color: #ececec;
   }
 }
@@ -343,7 +341,6 @@ header {
   background: rgba(255, 255, 255, 0.3);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
-
 header nav {
   max-width: 1024px;
   margin: 1rem auto;
@@ -352,28 +349,23 @@ header nav {
   align-content: center;
   align-items: center;
 }
-
 header nav a {
   text-decoration: none;
 }
-
 header nav a #logo_long {
   width: 100%;
   height: 2rem;
 }
-
 header nav #nav {
   display: flex;
   flex-grow: 1;
   justify-content: space-around;
 }
-
 header nav #nav ul {
   display: flex;
   flex-grow: 1;
   justify-content: space-around;
 }
-
 header nav #nav ul li a:after {
   content: "";
   position: absolute;
@@ -385,24 +377,19 @@ header nav #nav ul li a:after {
   bottom: 0;
   left: 0;
 }
-
 header nav #nav ul li a {
   position: relative;
   text-decoration: none;
 }
-
 header nav #nav ul li a i {
   display: none;
 }
-
 header nav #nav ul li a:hover {
   opacity: 1;
 }
-
 header nav #nav ul li a:hover:after {
   transform: scaleX(1.1);
 }
-
 header nav #toggle-nav {
   display: none;
 }
@@ -493,16 +480,13 @@ header nav #toggle-nav {
   flex-direction: column;
   border-radius: 0 1rem 1rem 0;
 }
-
 #reseaux a {
   color: #212121;
 }
-
 #reseaux a i {
   cursor: pointer;
   padding: 1rem;
 }
-
 #reseaux a:hover {
   opacity: 0.5;
 }
@@ -536,9 +520,13 @@ header nav #toggle-nav {
 }
 #crypto {
   width: 100%;
-  background: linear-gradient(50deg, rgb(79, 28, 100) 0%, rgb(252, 70, 107) 50%, rgb(33, 211, 237) 100%);
+  background: linear-gradient(
+    50deg,
+    rgb(79, 28, 100) 0%,
+    rgb(252, 70, 107) 50%,
+    rgb(33, 211, 237) 100%
+  );
 }
-
 #crypto h2 {
   font-family: titreh1;
   text-align: center;
@@ -546,13 +534,11 @@ header nav #toggle-nav {
   padding: 1rem;
   font-weight: lighter;
 }
-
 #crypto h3 {
   color: #4f1c64;
   font-size: 1.5rem;
   font-family: titreh1;
 }
-
 #crypto span {
   color: #fc466b;
   font-size: 1rem;
@@ -566,7 +552,6 @@ header nav #toggle-nav {
   gap: 1rem;
   grid-template-columns: repeat(1, 1fr);
 }
-
 @media (min-width: 768px) {
   #content-games {
     padding: 100px 1rem 0 1rem;
@@ -614,11 +599,9 @@ header nav #toggle-nav {
   border: 1px solid #ccc;
   border-radius: 0;
 }
-
 #content-games .game-card div {
   padding: 70px 0 1rem 0;
 }
-
 #content-games .game-card img:nth-child(2) {
   -o-object-fit: cover;
   object-fit: cover;
@@ -626,7 +609,6 @@ header nav #toggle-nav {
   overflow: hidden;
   height: 250px;
 }
-
 #content-games .game-card img:nth-child(3) {
   border-radius: 50%;
   height: 150px;
@@ -655,13 +637,13 @@ header nav #toggle-nav {
   height: 50vh;
   min-height: 300px;
 }
-
 @media only screen and (max-width: 768px) {
   #carrousel-content {
     border-left: none;
     border-right: none;
   }
 }
+
 .carrousel {
   display: flex;
   height: 100%;
@@ -779,5 +761,3 @@ header nav #toggle-nav {
     width: 90%;
   }
 }
-
-/*# sourceMappingURL=style.css.map */
