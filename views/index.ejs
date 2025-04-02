@@ -1,88 +1,47 @@
-<!DOCTYPE html>
-<html lang="fr" data-theme="">
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      property="og:description"
-      content="Le site officiel de la cryptomonnaie LaCrypte"
-    />
-    <meta property="og:url" content="http://lacrypte.com" />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="LaCrypte" />
-    <meta
-      property="og:keywords"
-      content="lacrypte, crypto, investissement, portfeuille, crytomonnaie"
-    />
-    <meta
-      property="og:image"
-      content="http://localhost:3000/media/image/PP_LaCrypte.webp"
-    />
-    <meta
-      property="image"
-      content="http://localhost:3000/media/image/PP_LaCrypte.webp"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      href="/media/favicon/favicon-96x96.png"
-      sizes="96x96"
-    />
-    <link rel="icon" type="image/svg+xml" href="/media/favicon/favicon.svg" />
-    <link rel="shortcut icon" href="/media/favicon/favicon.ico" />
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="/media/favicon/apple-touch-icon.png"
-    />
-    <link rel="manifest" href="/media/favicon/site.webmanifest" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/assets/styles/style.css" />
-    <title>LaCrypte</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-    />
-    <script type="module" src="/assets/js/main.js"></script>
-  </head>
+<head>
+  <script type="module" src="/assets/js/accueil.js"></script>
+</head>
 
-  <body>
-    <%- include("partials/header") %>
-    <main>
-      <section id="hero-header">
-        <div id="bg-hero">
-          <h1>LaCrypte</h1>
-          <div id="content">
-            <h2>Déterre le cryptophage en toi</h2>
-            <a href="#projet"><button>En savoir plus...</button></a>
-          </div>
-        </div>
-      </section>
+<%- include("partials/header") %>
 
-      <section id="projet">
-        <h2>Le projet</h2>
-      </section>
+<main>
+  <section id="hero-header">
+    <div id="bg-hero">
+      <h1>LaCrypte</h1>
+      <div id="content">
+        <h2>Déterre le cryptophage en toi</h2>
+        <a href="#projet"><button>En savoir plus...</button></a>
+      </div>
+    </div>
+  </section>
 
-      <section id="offre">
-        <h2>Nos offres</h2>
-      </section>
+  <section id="projet">
+    <h2>Le projet</h2>
+  </section>
 
-      <section id="carrousel">
-        <div id="carrousel-content">
-          <div class="carrousel"></div>
-          <div id="carrousel-controls">
-            <button class="prev">&#10094;</button>
-            <button class="next">&#10095;</button>
-          </div>
-        </div>
-        <div id="lightbox">
-          <span class="close">&times;</span>
-          <img src="" alt="" class="lightbox-content" id="lightbox-img" />
-        </div>
-      </section>
+  <section id="offre">
+    <h2>Nos offres</h2>
+  </section>
 
-      <section id="crypto"></section>
-    </main>
-    <%- include("partials/reseaux") %> <%- include("partials/footer") %> <%-
-    include("partials/top") %>
-  </body>
+  <section id="carrousel">
+    <div id="carrousel-content">
+      <div class="carrousel"></div>
+      <div id="carrousel-controls">
+        <button class="prev">&#10094;</button>
+        <button class="next">&#10095;</button>
+      </div>
+    </div>
+    <div id="lightbox">
+      <span class="close">&times;</span>
+      <img src="" alt="" class="lightbox-content" id="lightbox-img" />
+    </div>
+  </section>
+
+  <section id="crypto"></section>
+</main>
+<%- include("partials/reseaux") %>
+<%- include("partials/footer") %>
+<%- include("partials/top") %>
+</body>
+
 </html>
