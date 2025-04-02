@@ -16,6 +16,7 @@
   "license": "ISC",
   "description": "Le site officiel de la cryptomonnaie LaCrypte",
   "dependencies": {
+    "dotenv": "^16.4.7",
     "ejs": "^3.1.10",
     "express": "^5.1.0"
   },

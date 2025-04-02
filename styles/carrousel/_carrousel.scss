@@ -1,20 +1,24 @@
 #carrousel {
     padding: 0rem;
 }
+
 @media only screen and (max-width: 768px) {
     #carrousel {
         padding: 0;
     }
-    
+
 }
+
 #carrousel-content {
     position: relative;
     width: 100%;
     overflow: hidden;
+
     @media only screen and (max-width: 768px) {
         border-left: none;
         border-right: none;
     }
+
     height: 50vh;
     min-height: 300px;
 }
@@ -45,7 +49,7 @@
     top: 0;
     width: 100%;
     left: 50%;
-    transform: translateX(-50%) ;
+    transform: translateX(-50%);
     text-align: center;
     padding: 0.8rem;
     color: $text-color-dark;
@@ -59,8 +63,8 @@
     bottom: 1rem;
     width: 100%;
     left: 50%;
-    transform: translateY(-50%) ;
-    transform: translateX(-50%) ;
+    transform: translateY(-50%);
+    transform: translateX(-50%);
     margin: 0;
     padding: 0;
     display: flex;
@@ -76,7 +80,7 @@
     border-radius: 0%;
     padding: 1rem;
     margin: 0;
-    backdrop-filter: blur(1rem);
+    backdrop-filter: blur(10px);
 }
 
 #carrousel-controls button:hover {
@@ -112,23 +116,26 @@
     cursor: pointer;
 }
 
-.close:hover, .close:focus {
-  color: #bbb;
-  text-decoration: none;
-  cursor: pointer;
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 /* Ajustements responsive */
 @media (max-width: 768px) {
-  .carousel-caption {
-    font-size: 0.9rem;
-    padding: 0.3rem 0.8rem;
-  }
-  .carousel-controls button {
-    padding: 0.3rem 0.8rem;
-    font-size: 0.8rem;
-  }
-  #lightbox-img {
-    width: 90%;
-  }
+    .carousel-caption {
+        font-size: 0.9rem;
+        padding: 0.3rem 0.8rem;
+    }
+
+    .carousel-controls button {
+        padding: 0.3rem 0.8rem;
+        font-size: 0.8rem;
+    }
+
+    #lightbox-img {
+        width: 90%;
+    }
 }

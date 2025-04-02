@@ -206,7 +206,11 @@ button {
 }
 
 main #hero-header {
-  background: linear-gradient(50deg, rgb(79, 28, 100) 0%, rgb(252, 70, 107) 50%, rgb(33, 211, 237) 100%);
+  background-image: url(/media/image/bg-particles.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
   width: 100%;
 }
 main #hero-header #bg-hero {
@@ -224,7 +228,8 @@ main #hero-header #bg-hero h1 {
   font-family: titreh1;
   font-size: 5rem;
   padding: 1rem;
-  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(1rem);
+  background: rgba(255, 255, 255, 0.25);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
 main #hero-header #bg-hero div#content {
@@ -254,17 +259,15 @@ main #hero-header #bg-hero div#content button:hover {
   color: #ececec;
   box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
-main #projet, main #offre, main #contact {
+main #projet,
+main #offre,
+main #contact {
   min-height: 100vh;
   min-height: calc(var(--vh, 1vh) * 100);
 }
 
 #projet {
-  background-image: url(/media/image/PP_LaCrypte.webp);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed;
-  background-size: cover;
+  background: linear-gradient(50deg, rgb(79, 28, 100) 0%, rgb(252, 70, 107) 50%, rgb(33, 211, 237) 100%);
 }
 
 @media only screen and (max-width: 768px) {
@@ -680,7 +683,7 @@ header nav #toggle-nav {
   border-radius: 0%;
   padding: 1rem;
   margin: 0;
-  backdrop-filter: blur(1rem);
+  backdrop-filter: blur(10px);
 }
 
 #carrousel-controls button:hover {
@@ -715,7 +718,8 @@ header nav #toggle-nav {
   cursor: pointer;
 }
 
-.close:hover, .close:focus {
+.close:hover,
+.close:focus {
   color: #bbb;
   text-decoration: none;
   cursor: pointer;

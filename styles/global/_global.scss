@@ -20,21 +20,25 @@ html {
 html[data-theme="light"] {
     background-color: $bg-color-light;
     color: $text-color-light;
+
     & a {
         color: $text-color-light;
     }
+
     & header {
         & nav {
             & a {
                 & #logo_long {
                     fill: $text-color-light;
                 }
+
                 & #logo_long:hover {
                     opacity: 0.5;
                 }
             }
+
             & #nav {
-                & i[data-theme-toggler]{
+                & i[data-theme-toggler] {
                     color: $text-color-light;
                 }
             }
@@ -45,21 +49,25 @@ html[data-theme="light"] {
 html[data-theme="dark"] {
     background-color: $bg-color-dark;
     color: $text-color-dark;
+
     & a {
         color: $text-color-dark;
     }
+
     & header {
         & nav {
             & a {
                 & #logo_long {
                     fill: $text-color-dark;
                 }
+
                 & #logo_long:hover {
                     opacity: 0.5;
                 }
             }
+
             & #nav {
-                & i[data-theme-toggler]{
+                & i[data-theme-toggler] {
                     color: $text-color-dark;
                 }
             }
@@ -92,8 +100,14 @@ button {
 
 main {
     & #hero-header {
-        background: $degrade;
+        background-image: url(/media/image/bg-particles.webp);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: fixed;
+        background-size: cover;
+
         width: 100%;
+
         & #bg-hero {
             width: 100%;
             min-height: 100vh;
@@ -103,14 +117,17 @@ main {
             justify-content: center;
             align-items: center;
             align-content: center;
-                & h1 {
+
+            & h1 {
                 text-align: center;
                 font-family: titreh1;
                 font-size: 5rem;
                 padding: 1rem;
-                background: rgba(255, 255, 255, 0.3);
+                backdrop-filter: blur(1rem);
+                background: rgba(255, 255, 255, 0.25);
                 box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
             }
+
             & div#content {
                 display: flex;
                 flex-direction: column;
@@ -119,39 +136,41 @@ main {
                 align-content: center;
                 padding: 1rem;
                 gap: 1rem;
+
                 & h2 {
                     font-family: titreh1;
                     text-align: center;
                     font-size: 3rem;
                     padding: 1rem;
                     font-weight: lighter;
-                    }
+                }
+
                 & button {
                     font-size: 1.5rem;
                     color: $bg-color-dark;
                     background: $bg-color-light;
                     box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
                 }
+
                 & button:hover {
                     background-color: $text-color-light;
                     color: $text-color-dark;
                     box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
-                    }
                 }
             }
         }
-    & #projet, #offre, #contact {
+    }
+
+    & #projet,
+    #offre,
+    #contact {
         min-height: 100vh;
         min-height: calc(var(--vh, 1vh)*100);
     }
 }
 
 #projet {
-    background-image: url(/media/image/PP_LaCrypte.webp);
-    background-repeat: no-repeat;
-    background-position:center;
-    background-attachment: fixed;
-    background-size: cover;
+    background: $degrade;
 }
 
 
@@ -163,23 +182,27 @@ main {
             & nav {
                 & #nav {
                     background-color: $bg-color-dark;
+
                     & ul {
                         & li {
-                            & a{
+                            & a {
                                 color: $bg-color-light;
                             }
                         }
                     }
-                    & i[data-theme-toggler]{
+
+                    & i[data-theme-toggler] {
                         color: $text-color-dark;
                         cursor: pointer;
                     }
-                    & i[data-theme-toggler]:hover{
+
+                    & i[data-theme-toggler]:hover {
                         opacity: 0.5;
                     }
                 }
             }
         }
+
         & #reseaux {
             a {
                 & i {
@@ -188,29 +211,33 @@ main {
             }
         }
     }
-    
+
     html[data-theme="dark"] {
         & header {
             & nav {
                 & #nav {
                     background-color: $bg-color-light;
+
                     & ul {
                         & li {
-                            & a{
+                            & a {
                                 color: $bg-color-dark;
                             }
                         }
                     }
-                    & i[data-theme-toggler]{
+
+                    & i[data-theme-toggler] {
                         color: $text-color-light;
                         cursor: pointer;
                     }
-                    & i[data-theme-toggler]:hover{
+
+                    & i[data-theme-toggler]:hover {
                         opacity: 0.5;
                     }
                 }
             }
         }
+
         & #reseaux {
             a {
                 & i {
@@ -230,13 +257,16 @@ main {
                     font-size: 2rem !important;
                     justify-content: space-around;
                 }
+
                 & #content {
                     display: flex;
                     flex-direction: column;
+
                     & h2 {
                         font-size: 2rem;
                         padding: 1rem;
-                        }
+                    }
+
                     & button {
                         font-size: 1rem;
                     }

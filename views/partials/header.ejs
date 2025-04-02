@@ -6,7 +6,7 @@
       property="og:description"
       content="Le site officiel de la cryptomonnaie LaCrypte"
     />
-    <meta property="og:url" content="http://lacrypte.com" />
+    <meta property="og:url" content="<%= process.env.SITE_URL %>" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="LaCrypte" />
     <meta
@@ -15,22 +15,22 @@
     />
     <meta
       property="og:image"
-      content="http://localhost:3000/assets/media/image/PP_LaCrypte.webp"
+      content="<%= process.env.SITE_URL %>/media/image/PP_LaCrypte.webp"
     />
     <link
       rel="icon"
       type="image/png"
-      href="/media/favicon/favicon-96x96.png"
+      href="<%= process.env.SITE_URL %>/media/favicon/favicon-96x96.png"
       sizes="96x96"
     />
-    <link rel="icon" type="image/svg+xml" href="/media/favicon/favicon.svg" />
-    <link rel="shortcut icon" href="/media/favicon/favicon.ico" />
+    <link rel="icon" type="image/svg+xml" href="<%= process.env.SITE_URL %>/media/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="<%= process.env.SITE_URL %>/media/favicon/favicon.ico" />
     <link
       rel="apple-touch-icon"
       sizes="180x180"
-      href="/media/favicon/apple-touch-icon.png"
+      href="<%= process.env.SITE_URL %>/media/favicon/apple-touch-icon.png"
     />
-    <link rel="manifest" href="/media/favicon/site.webmanifest" />
+    <link rel="manifest" href="<%= process.env.SITE_URL %>/media/favicon/site.webmanifest" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/assets/styles/style.css" />
     <title><%= typeof title !== "undefined" ? "LaCrypte | " + title : "LaCrypte" %></title>
