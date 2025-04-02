@@ -1,0 +1,232 @@
+#crypto {
+  width: 100%;
+  background: linear-gradient(50deg, rgb(79, 28, 100) 0%, rgb(252, 70, 107) 50%, rgb(33, 211, 237) 100%);
+}
+#crypto h2 {
+  font-family: titreh1;
+  text-align: center;
+  font-size: 3rem;
+  padding: 1rem;
+  font-weight: lighter;
+}
+#crypto h3 {
+  color: #4f1c64;
+  font-size: 1.5rem;
+  font-family: titreh1;
+}
+#crypto span {
+  color: #fc466b;
+  font-size: 1rem;
+}
+
+#content-games {
+  max-width: 1024px;
+  margin: auto;
+  padding-top: 100px;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(1, 1fr);
+}
+@media (min-width: 768px) {
+  #content-games {
+    padding: 100px 1rem 0 1rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  #content-games .game-card {
+    border-radius: 5px !important;
+    height: 400px;
+  }
+  #content-games .game-card div {
+    padding: 40px 0 1rem 0;
+  }
+  #content-games .game-card img:nth-child(2) {
+    object-fit: cover;
+    flex-grow: 1;
+    overflow: hidden;
+  }
+}
+@media (min-width: 1024px) {
+  #content-games {
+    grid-template-columns: repeat(4, 1fr);
+    padding: 100px 0 0 0;
+  }
+  #content-games .game-card {
+    border-radius: 5px !important;
+    height: 300px;
+  }
+  #content-games .game-card div {
+    padding: 50px 0 1rem 0;
+  }
+  #content-games .game-card img:nth-child(2) {
+    object-fit: cover;
+    flex-grow: 1;
+  }
+}
+#content-games .game-card {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 100px;
+  position: relative;
+  background: #fff;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 0;
+}
+#content-games .game-card div {
+  padding: 70px 0 1rem 0;
+}
+#content-games .game-card img:nth-child(2) {
+  object-fit: cover;
+  flex-grow: 1;
+  overflow: hidden;
+  height: 250px;
+}
+#content-games .game-card img:nth-child(3) {
+  border-radius: 50%;
+  height: 150px;
+  width: 150px;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#carrousel {
+  padding: 0rem;
+}
+
+@media only screen and (max-width: 768px) {
+  #carrousel {
+    padding: 0;
+  }
+}
+#carrousel-content {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  height: 50vh;
+  min-height: 300px;
+}
+@media only screen and (max-width: 768px) {
+  #carrousel-content {
+    border-left: none;
+    border-right: none;
+  }
+}
+
+.carrousel {
+  display: flex;
+  height: 100%;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carrousel-slide {
+  position: relative;
+  min-width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.carrousel-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.carrousel-caption {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  padding: 0.8rem;
+  color: #ececec;
+  background: rgba(252, 70, 107, 0.5058823529);
+  font-weight: bolder;
+  backdrop-filter: blur(10px);
+}
+
+#carrousel-controls {
+  position: absolute;
+  bottom: 1rem;
+  width: 100%;
+  left: 50%;
+  transform: translateY(-50%);
+  transform: translateX(-50%);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+#carrousel-controls button {
+  color: #ececec;
+  background: rgba(33, 33, 33, 0.5058823529);
+  font-size: 1rem;
+  border: none;
+  border-radius: 0%;
+  padding: 1rem;
+  margin: 0;
+  backdrop-filter: blur(10px);
+}
+
+#carrousel-controls button:hover {
+  color: #ececec;
+  background: #fc466b;
+}
+
+#lightbox {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 1000000;
+  top: 0;
+  left: 0;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(10px);
+}
+
+#lightbox-img {
+  width: 50%;
+}
+
+.close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  color: #ececec;
+  font-size: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Ajustements responsive */
+@media (max-width: 768px) {
+  .carousel-caption {
+    font-size: 0.9rem;
+    padding: 0.3rem 0.8rem;
+  }
+  .carousel-controls button {
+    padding: 0.3rem 0.8rem;
+    font-size: 0.8rem;
+  }
+  #lightbox-img {
+    width: 90%;
+  }
+}
+
+/*# sourceMappingURL=accueil.css.map */

@@ -1,0 +1,40 @@
+footer {
+    display: flex;
+    justify-content: center;
+
+    & #footer-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        gap: 1rem;
+        padding: 1rem;
+
+        & #reseaux-footer {
+            display: flex;
+            justify-content: space-between;
+
+            & a {
+                & i {
+                    font-size: 1rem;
+                }
+            }
+
+            & a:hover {
+                opacity: 0.5;
+            }
+        }
+    }
+
+    & p {
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    footer {
+        height: 33vh;
+        min-height: calc(var(--vh, 1vh)*33);
+        margin-bottom: 5vh;
+    }
+}

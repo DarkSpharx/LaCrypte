@@ -1,5 +1,6 @@
 <head>
   <script type="module" src="<%= process.env.SITE_URL %>/assets/js/accueil.js"></script>
+  <link rel="stylesheet" href="<%= process.env.SITE_URL %>/assets/styles/accueil.css">
 </head>
 
 <%- include("partials/header") %>
@@ -16,7 +17,8 @@
   </section>
 
   <section id="projet">
-    <h2>Le projet</h2>
+    <div id="projet-content">
+      <h2>Le projet</h2>
     <p>LaCrypte est une nouvelle crypto-monnaie révolutionnaire conçue pour répondre aux besoins croissants d'un écosystème financier décentralisé. À l'ère du numérique, où la transparence, la sécurité et la rapidité des transactions sont primordiales, LaCrypte se positionne comme une solution innovante pour les utilisateurs souhaitant naviguer dans le monde des monnaies virtuelles.</p>
     <hr>
     <h3>Concept et Vision</h3>
@@ -36,10 +38,12 @@
     <h3>Utilisations et Applications</h3>
     <p>LaCrypte peut être utilisée pour divers types de transactions, qu'il s'agisse de paiements en ligne, de transferts d'argent entre particuliers ou de commerce électronique. De plus, notre plateforme est ouverte aux développeurs, leur permettant de créer des applications décentralisées (dApps) intégrant LaCrypte.</p>
     <p>LaCrypte est plus qu'une simple crypto-monnaie ; c'est un projet qui aspire à transformer la manière dont nous effectuons des transactions. En adoptant LaCrypte, vous rejoignez une communauté engagée vers un avenir financier décentralisé, transparent et accessible à tous. Rejoignez-nous dans cette aventure passionnante et participez à la révolution de la finance numérique !</p>
+    </div>
   </section>
 
   <section id="offre">
-    <h2>Nos offres</h2>
+    <div id="offre-content">
+      <h2>Nos offres</h2>
     <h3>1. Achat et Vente de LaCrypte</h3>
     <p>Nous proposons une plateforme intuitive pour l'achat et la vente de LaCrypte. Que vous soyez un novice ou un expert en crypto-monnaies, notre interface conviviale facilite les transactions. Les utilisateurs peuvent acheter des LaCrypte en utilisant des devises traditionnelles ou d'autres crypto-monnaies.</p>
     <hr>
@@ -56,6 +60,7 @@
     <p>Notre équipe de support client est disponible 24/7 pour aider les utilisateurs avec toutes leurs questions et préoccupations. Que vous ayez besoin d'assistance technique ou d'informations sur l'utilisation de LaCrypte, nous sommes là pour vous aider à chaque étape.</p>
     <hr>
     <p>LaCrypte ne se limite pas à être une simple crypto-monnaie ; c'est une solution complète qui englobe l'achat, le staking, l'éducation et une forte intégration commerciale. Rejoignez-nous et découvrez toutes les possibilités qu'offre LaCrypte pour transformer votre expérience dans le monde des crypto-monnaies.</p>
+    </div>
   </section>
 
   <section id="carrousel">
@@ -75,8 +80,8 @@
   <section id="crypto"></section>
 </main>
 <%- include("partials/reseaux") %>
-<%- include("partials/footer") %>
 <%- include("partials/top") %>
+<%- include("partials/footer") %>
 </body>
 
 </html>

@@ -1,6 +1,10 @@
-    <%- include("../partials/header", {title: "contact"}) %>
+<head>
+  <link rel="stylesheet" href="<%= process.env.SITE_URL %>/assets/styles/contact.css">
+</head>
+<%- include("../partials/header", {title: "contact"}) %>
     <main></main>
-    <%- include("../partials/reseaux") %> <%- include("../partials/footer") %>
+    <%- include("../partials/reseaux") %>
+    <%- include("../partials/footer") %>
     <%- include("../partials/top") %>
     <div include-html=""></div>
   </body>
