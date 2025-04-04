@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 const path = require("path");
 require("dotenv").config();
-const { fetchData } = require("./Public/assets/js/lib/functions");
+const { fetchData } = require("./public/assets/js/lib/functions");
 
 app.set("view engine", "ejs");
 

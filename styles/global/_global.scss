@@ -7,8 +7,19 @@
     scroll-behavior: smooth;
 }
 
+/* Appliquer box-sizing pour une gestion correcte des dimensions */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 img {
     max-width: 100%;
+}
+
+textarea {
+    resize: none;
 }
 
 html {
@@ -41,6 +52,10 @@ html[data-theme="light"] {
                 & i[data-theme-toggler] {
                     color: $text-color-light;
                 }
+
+                & i:hover {
+                    opacity: 0.5;
+                }
             }
         }
     }
@@ -69,6 +84,10 @@ html[data-theme="dark"] {
             & #nav {
                 & i[data-theme-toggler] {
                     color: $text-color-dark;
+                }
+
+                & i:hover {
+                    opacity: 0.5;
                 }
             }
         }
@@ -112,8 +131,9 @@ main {
         background-position: center;
         background-attachment: fixed;
         background-size: cover;
-
         width: 100%;
+        min-height: 100vh;
+        min-height: calc(var(--vh, 1vh)*100);
 
         & #bg-hero {
             width: 100%;
@@ -208,10 +228,6 @@ main {
                         color: $text-color-dark;
                         cursor: pointer;
                     }
-
-                    & i[data-theme-toggler]:hover {
-                        opacity: 0.5;
-                    }
                 }
             }
         }
@@ -233,11 +249,7 @@ main {
 
                     & i[data-theme-toggler] {
                         color: $text-color-light;
-                        cursor: pointer;
-                    }
 
-                    & i[data-theme-toggler]:hover {
-                        opacity: 0.5;
                     }
                 }
             }

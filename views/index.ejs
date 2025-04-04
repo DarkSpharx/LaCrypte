@@ -3,9 +3,10 @@
   <link rel="stylesheet" href="<%= process.env.SITE_URL %>/assets/styles/accueil.css">
 </head>
 
-<%- include("partials/header") %>
+<%- include("./partials/header", {title: "accueil"}) %>
 
-<main>
+
+<main id="accueil">
   <section id="hero-header">
     <div id="bg-hero">
       <h1>LaCrypte</h1>

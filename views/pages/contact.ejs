@@ -1,8 +1,62 @@
 <head>
   <link rel="stylesheet" href="<%= process.env.SITE_URL %>/assets/styles/contact.css">
+  <script type="module" src="<%= process.env.SITE_URL %>/assets/js/contact.js"></script>
 </head>
 <%- include("../partials/header", {title: "contact"}) %>
-    <main></main>
+    <main>
+      <section id="contact-form">
+        <h1>Contactez-nous</h1>
+        <form id="form-contact" novalidate>
+          <div id="form-group">
+            <label for="name">
+              Name : 
+            </label>
+            <div class="input-wrapper">
+              <input type="text" name="name" id="name" placeholder="Votre NOM" autofocus></input>
+              <i class="validation-icon"></i>
+            </div>
+          </div>
+          
+          <div id="form-group">
+            <label for="email">
+              Email : 
+            </label>
+            <div class="input-wrapper">
+              <input type="email" name="email" id="email" placeholder="Votre @email"></input>
+              <i class="validation-icon"></i>
+            </div>
+          </div>
+
+          <div id="form-group">
+            <label for="subject">
+              Sujet : 
+            </label>
+            <div class="input-wrapper">
+              <input type="email" name="subject" id="subject" placeholder="Le sujet de votre message"></input>
+              <i class="validation-icon"></i>
+            </div>
+          </div>
+
+          <div id="form-group">
+            <label for="message">
+              Message : 
+            </label>
+            <div class="input-wrapper">
+              <textarea name="message" id="message"></textarea>
+              <i class="validation-icon"></i>
+            </div>
+            
+            <div class="error" id="error-name"></div>
+            <div class="error" id="error-email"></div>
+            <div class="error" id="error-subject"></div>
+            <div class="error" id="error-message"></div>
+          </div>
+            
+          <button type="submit" class="submit">Envoyer</button>
+        </form>
+        <div id="response-message"></div>
+      </section>
+    </main>
     <%- include("../partials/reseaux") %>
     <%- include("../partials/footer") %>
     <%- include("../partials/top") %>
