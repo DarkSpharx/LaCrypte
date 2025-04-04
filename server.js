@@ -16,17 +16,29 @@ app.get("/contact", (req, res) => {
   res.render("pages/contact");
 });
 
-app.get("/masonry", (req, res) => {
-  res.render("pages/masonry", {images: imagesTab});
-});
-
 const images = fetchData({
-  route:
-    "/games?key=de462d1e145d44e084148f017bf5976d&dates=2019-09-01,2019-09-30&platforms=18,1,7",
+  api: 'https://api.unsplash.com',
+  route: '/photos',
+  options: {
+    headers: {
+      Authorization: `Client-ID ${process.env.KeyApi}`,
+    },
+    params: { per_page: 50 },
+  },
 }).then((data) => {
-  return data.results;
+  return data;
 });
 
+app.get('/gallerie', async (req, res) => {
+  try {
+    const imagesData = await images;
+    console.log(imagesData);
+    res.render('pages/gallerie', { images: imagesData });
+  } catch (err) {
+    console.log(err);
+    res.render('pages/gallerie', { images: [] });
+  }
+});
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {

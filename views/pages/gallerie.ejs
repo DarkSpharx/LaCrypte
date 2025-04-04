@@ -1,0 +1,26 @@
+<head>
+    <link rel="stylesheet" href="<%= process.env.SITE_URL %>/assets/styles/gallerie.css">
+    <script type="module" src="<%= process.env.SITE_URL %>/assets/js/gallerie.js"></script>
+</head>
+<%- include("../partials/header", {title: "gallerie"}) %>
+<main>
+    <div id="gallerie-content">
+        <h1>Gallerie</h1>
+        <ul class="grid">
+            <% images.forEach((image) => { %>
+                <li class="image-grid">
+                    <img src="<%= image.urls.regular %>" alt="<%= image.alt_description %>">
+                </li>
+            <% }); %>
+        </ul>
+    </div>
+    <div id="lightbox">
+        <span class="close">&times;</span>
+        <img src="" alt="" class="lightbox-content" id="lightbox-img" />
+    </div>
+</main>
+<%- include("../partials/footer") %>
+<%- include("../partials/reseaux") %>
+<%- include("../partials/top") %>
+</body>
+</html>

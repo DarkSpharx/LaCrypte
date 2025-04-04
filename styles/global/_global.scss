@@ -92,10 +92,17 @@ button {
     position: fixed;
     right: 1rem;
     bottom: 1rem;
-    color: $text-color-dark;
     font-size: 2rem;
     padding: 0.5rem;
-    mix-blend-mode: exclusion;
+    cursor: pointer;
+}
+
+#scroll-top.mobile {
+    position: relative;
+    right: inherit;
+    bottom: inherit;
+    width: 2rem;
+    cursor: pointer;
 }
 
 main {
