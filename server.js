@@ -17,7 +17,7 @@ app.set("view engine", "ejs");
 app.use(express.static(path.join(__dirname, "public"))); // => /front/public/
 
 // pour parser le JSON
-app.use(express.json()) 
+app.use(express.json());
 
 // Sécuriser les en-têtes HTTP
 app.use(
@@ -29,30 +29,34 @@ app.use(
         styleSrc: [
           "'self'",
           "'unsafe-inline'",
-          'https://fonts.googleapis.com/',
-          'https://cdnjs.cloudflare.com/',
+          "https://fonts.googleapis.com/",
+          "https://cdnjs.cloudflare.com/",
         ],
         styleSrcElem: [
           "'self'",
           "'unsafe-inline'",
-          'https://fonts.googleapis.com/',
-          'https://cdnjs.cloudflare.com/',
+          "https://fonts.googleapis.com/",
+          "https://cdnjs.cloudflare.com/",
         ],
         fontSrc: [
           "'self'",
-          'https://fonts.gstatic.com/',
-          'https://cdnjs.cloudflare.com/',
+          "https://fonts.gstatic.com/",
+          "https://cdnjs.cloudflare.com/",
         ],
         imgSrc: [
           "'self'",
-          'data:',
-          'https://images.unsplash.com/',
-          'https://media.rawg.io/',
+          "data:",
+          "https://images.unsplash.com/",
+          "https://media.rawg.io/",
         ],
         connectSrc: [
           "'self'",
-          'https://api.unsplash.com/',
-          'https://api.rawg.io/',
+          "https://api.unsplash.com/",
+          "https://api.rawg.io/",
+        ],
+        frameSrc: [
+          "https://www.youtube.com",
+          "https://www.youtube-nocookie.com",
         ],
       },
     },
@@ -68,8 +72,8 @@ app.get("/contact", (req, res) => {
 });
 
 const images = fetchData({
-  api: 'https://api.unsplash.com',
-  route: '/photos',
+  api: "https://api.unsplash.com",
+  route: "/photos",
   options: {
     headers: {
       Authorization: `Client-ID ${process.env.KeyApi}`,
@@ -80,14 +84,14 @@ const images = fetchData({
   return data;
 });
 
-app.get('/gallerie', async (req, res) => {
+app.get("/gallerie", async (req, res) => {
   try {
     const imagesData = await images;
     console.log(imagesData);
-    res.render('pages/gallerie', { images: imagesData });
+    res.render("pages/gallerie", { images: imagesData });
   } catch (err) {
     console.log(err);
-    res.render('pages/gallerie', { images: [] });
+    res.render("pages/gallerie", { images: [] });
   }
 });
 
@@ -97,7 +101,7 @@ app.listen(PORT, () => {
 });
 
 // envoie message
-app.post("/contact", async (req,res) => {
+app.post("/contact", async (req, res) => {
   console.log(req.body);
   const { name, email, subject, message } = req.body;
   const htmlContent = `
@@ -124,7 +128,7 @@ app.post("/contact", async (req,res) => {
     });
 
     let mailOptions = {
-      from:`"contact LaCrypte" <${email}>`,
+      from: `"contact LaCrypte" <${email}>`,
       to: process.env.CONTACT_RECEIVER_EMAIL,
       subject: subject,
       html: htmlContent,
@@ -134,13 +138,15 @@ app.post("/contact", async (req,res) => {
 
     // récupération de l'URL de prévisualisation du message pour le test en local
     console.log("message envoyé : %s", info.messageId);
-    console.log("URL de prévisualisation : %s", nodemailer.getTestMessageUrl(info));
+    console.log(
+      "URL de prévisualisation : %s",
+      nodemailer.getTestMessageUrl(info)
+    );
 
     res.status(200).json({
       message: "Votre message a bien été envoyé.",
       previewURL: nodemailer.getTestMessageUrl(info),
     });
-
   } catch (error) {
     console.log(error);
     res.status(500).json({

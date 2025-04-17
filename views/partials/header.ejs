@@ -17,6 +17,16 @@
       property="og:image"
       content="<%= process.env.SITE_URL %>/media/image/PP_LaCrypte.webp"
     />
+    <meta http-equiv="Content-Security-Policy" content="
+  default-src 'self';
+  style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com;
+  script-src 'self' 'unsafe-inline';
+  frame-src https://www.youtube.com https://www.youtube-nocookie.com;
+  connect-src 'self' https://api.rawg.io;
+  font-src 'self' https://cdnjs.cloudflare.com;
+  img-src 'self' data: https:; 
+">
+
     <link
       rel="icon"
       type="image/png"

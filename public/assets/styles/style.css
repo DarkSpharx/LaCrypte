@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -238,6 +239,20 @@ main #hero-header {
   width: 100%;
   min-height: 100vh;
   min-height: calc(var(--vh, 1vh) * 100);
+  overflow: hidden;
+  position: relative;
+}
+main #hero-header .video-iframe {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100vw;
+  height: 56.25vw; /* 16:9 ratio */
+  min-height: 100vh;
+  min-width: 177.77vh; /* 16:9 ratio */
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  pointer-events: none; /* pour que les clics passent à travers */
 }
 main #hero-header #bg-hero {
   width: 100%;
@@ -248,6 +263,7 @@ main #hero-header #bg-hero {
   justify-content: center;
   align-items: center;
   align-content: center;
+  z-index: 3;
 }
 main #hero-header #bg-hero h1 {
   text-align: center;
@@ -256,7 +272,6 @@ main #hero-header #bg-hero h1 {
   padding: 1rem;
   backdrop-filter: blur(1rem);
   background: rgba(255, 255, 255, 0.25);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
 main #hero-header #bg-hero div#content {
   display: flex;
@@ -266,6 +281,9 @@ main #hero-header #bg-hero div#content {
   align-content: center;
   padding: 1rem;
   gap: 1rem;
+  z-index: 1;
+  backdrop-filter: blur(1rem);
+  background: rgba(255, 255, 255, 0.25);
 }
 main #hero-header #bg-hero div#content h2 {
   font-family: titreh1;

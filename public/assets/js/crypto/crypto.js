@@ -69,11 +69,17 @@ function create(loading, tabGames) {
         fill: "forwards",
       };
       // création de l'observer
+      let lastScrollY = window.scrollY;
       const observer = new IntersectionObserver(
         (entries) => {
+          // détection du sens du scroll
+          const currentScrollY = window.scrollY;
+          const isScrollingDown = currentScrollY > lastScrollY;
+          lastScrollY = currentScrollY;
           entries.forEach((entry) => {
-            if (entry.isIntersecting) {
+            if (entry.isIntersecting && isScrollingDown) {
               entry.target.animate(anim, options);
+              // observer.unobserve(entry.target); // on observe une seule fois l'élément
             }
           });
         },
