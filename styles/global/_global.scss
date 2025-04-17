@@ -150,16 +150,16 @@ main {
             pointer-events: none; /* pour que les clics passent à travers */
           }
 
-        // &.video-overlay {
-        //     position: absolute;
-        //     top: 0;
-        //     left: 0;
-        //     width: 100%;
-        //     height: 100%;
-        //     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7));
-        //     z-index: 2;
-        //     pointer-events: none;
-        //   }
+        &.video-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7));
+            z-index: 2;
+            pointer-events: none;
+          }
 
         & #bg-hero {
             width: 100%;
@@ -322,3 +322,90 @@ main {
         bottom: 4rem;
     }
 }
+
+
+// #hero-header {
+//     position: relative;
+//     width: 100%;
+//     height: 100vh;
+//     overflow: hidden;
+//   }
+  
+//   .video-iframe {
+//     position: absolute;
+//     top: 50%;
+//     left: 50%;
+//     width: 100vw;
+//     height: 56.25vw; /* 16:9 ratio */
+//     min-height: 100vh;
+//     min-width: 177.77vh; /* 16:9 ratio */
+//     transform: translate(-50%, -50%);
+//     z-index: 1;
+//     pointer-events: none; /* pour que les clics passent à travers */
+//   }
+  
+//   .video-overlay {
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     width: 100%;
+//     height: 100%;
+//     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7));
+//     z-index: 2;
+//     pointer-events: none;
+//     backdrop-filter: blur(10px); /* Effet de flou */
+//   }
+  
+//   #bg-hero {
+//     position: relative;
+//     z-index: 3;
+//     text-align: center;
+//     color: white;
+//     padding-top: 20vh;
+//   }
+  
+//   #bg-hero h1 {
+//     font-size: 4rem;
+//     margin-bottom: 1rem;
+//   }
+  
+//   #bg-hero h2 {
+//     font-size: 2rem;
+//     margin-bottom: 2rem;
+//   }
+  
+//   #bg-hero button {
+//     padding: 1rem 2rem;
+//     font-size: 1rem;
+//     background-color: #ffffffcc;
+//     color: #000;
+//     border: none;
+//     cursor: pointer;
+//     transition: background 0.3s;
+//   }
+  
+//   #bg-hero button:hover {
+//     background-color: #fff;
+//   }
+  
+//   /* Mobile version */
+//   @media (max-width: 768px) {
+//     .video-iframe {
+//       width: 100%;
+//       height: auto;
+//     }
+  
+//     #bg-hero h1 {
+//       font-size: 2.5rem;
+//     }
+  
+//     #bg-hero h2 {
+//       font-size: 1.5rem;
+//     }
+  
+//     #bg-hero button {
+//       padding: 0.8rem 1.5rem;
+//       font-size: 0.9rem;
+//     }
+//   }
+  
