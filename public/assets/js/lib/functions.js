@@ -1,30 +1,30 @@
-// on stock ici les function qui ne sont utiles a l'animation du DOM mais des requettes
+let apiUrl = "https://api.rawg.io/api";
 
-// la route API (ex: http://localhost:3000)
-const apiUrl = "https://api.rawg.io/api";
-
-// fonction asynchrone (pour avoir une réponse)
-// si async mettre await dans le traitement
-// ex: de route => /blog
-// ex: options => {Accept: "application/json"}
+(async function fetchConfig() {
+  try {
+    const response = await fetch("/config");
+    const config = await response.json();
+    apiUrl = config.apiUrl || "https://api.rawg.io/api";
+  } catch (error) {
+    console.error("Erreur lors de la récupération de la configuration :", error);
+  }
+})();
 
 /**
- *
+ * Fonction pour effectuer des requêtes API
  * @param {string} route
- * @param {object} options - peut inclure une propriété "parmas" pour les query params
+ * @param {object} options - peut inclure une propriété "params" pour les query params
  * @returns {Promise}
  */
-
 export async function fetchData({ route, api = apiUrl, options = {} }) {
-  // préparation de l'entrée "headers"avec les clés valeurs nécessaire pour l'appel [Authorization:"Bearer geg56eg416rge41"]
   const headers = { Accept: "application/json", ...options.headers };
-  console.log(headers);
-  // appel méthode native fetch (requette d'API de type asynchrone)
+
   let queryString = "";
   if (options.params) {
     queryString = "?" + new URLSearchParams(options.params).toString();
     delete options.params;
   }
+
   const result = await fetch(`${api}${route}${queryString}`, { ...options, headers });
 
   if (result.ok) {

@@ -18,15 +18,15 @@ import { fetchData } from "../lib/functions.js";
 window.addEventListener("DOMContentLoaded", () => {
   let loading = true;
   let tabGames = [];
-  fetchData({ 
+  fetchData({
     route: "/games",
     options: {
       params: {
         key: "de462d1e145d44e084148f017bf5976d",
         dates: "2019-09-01,2019-09-30",
-        platforms:"18,1,7",
-      }
-    }
+        platforms: "18,1,7",
+      },
+    },
   })
     .then((data) => {
       return data.results;
@@ -46,9 +46,45 @@ function create(loading, tabGames) {
     container.setAttribute("id", "content-games");
     crypto.appendChild(container);
     tabGames.map((game) => {
+      const divArea = document.createElement("div");
+      // style de départ de l'animation
+      divArea.style.opacity = "0.7";
+      divArea.style.transform = "scale(0.8)";
+      container.appendChild(divArea);
+      // animation | keyframe
+      const anim = [
+        {
+          opacity: "0.7",
+          transform: "scale(0.8)",
+        },
+        {
+          opacity: "1",
+          transform: "scale(1)",
+        },
+      ];
+      // options possibles pour l'animation
+      const options = {
+        duration: 800,
+        easing: "ease-in-out",
+        fill: "forwards",
+      };
+      // création de l'observer
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.animate(anim, options);
+            }
+          });
+        },
+        {
+          threshold: 0.5,
+        }
+      );
+      // élément à observer
+      observer.observe(divArea);
       // for (let i = 0; i < tabGames.length; i += 2) {
       // let pair = tabGames.slice(i, i + 2);
-      const divArea = document.createElement("div");
       container.appendChild(divArea);
       // pair.map((game) => {
       const card = document.createElement("div");

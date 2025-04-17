@@ -6,7 +6,7 @@
     "sass": "sass --watch styles:public/assets/styles",
     "test": "echo \"Error: no test specified\" && exit 1",
     "server": "nodemon server.js",
-    "browsersync": "browser-sync start --proxy http://localhost:3000 --files \"public/assets/styles/**/*.css,public/assets/js/**/*.js,views/**/*.ejs\"",
+    "browsersync": "browser-sync start --proxy http://localhost:3010 --files \"public/assets/styles/**/*.css,public/assets/js/**/*.js,views/**/*.ejs\"",
     "start": "concurrently \"npm run sass\" \"npm run server\" \"npm run browsersync\""
   },
   "keywords": [
@@ -18,7 +18,9 @@
   "dependencies": {
     "dotenv": "^16.4.7",
     "ejs": "^3.1.10",
-    "express": "^5.1.0"
+    "express": "^5.1.0",
+    "helmet": "^8.1.0",
+    "nodemailer": "^6.10.0"
   },
   "devDependencies": {
     "browser-sync": "^3.0.3",
