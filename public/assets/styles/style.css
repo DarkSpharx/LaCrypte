@@ -246,13 +246,35 @@ main #hero-header .video-iframe {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 100vw;
+  width: 100%;
   height: 56.25vw; /* 16:9 ratio */
   min-height: 100vh;
   min-width: 177.77vh; /* 16:9 ratio */
   transform: translate(-50%, -50%);
   z-index: 1;
   pointer-events: none; /* pour que les clics passent à travers */
+}
+main #hero-header.video-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  min-width: 100vh;
+  min-height: 100vh;
+  background-color: #4f1c64;
+  z-index: 2;
+  pointer-events: none;
+}
+main #hero-header p {
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  transform: translate(-50%, -75%);
+  font-size: 1rem;
+  text-align: center;
+  z-index: 3;
 }
 main #hero-header #bg-hero {
   width: 100%;
@@ -272,6 +294,8 @@ main #hero-header #bg-hero h1 {
   padding: 1rem;
   backdrop-filter: blur(1rem);
   background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  z-index: 1;
 }
 main #hero-header #bg-hero div#content {
   display: flex;
@@ -282,8 +306,6 @@ main #hero-header #bg-hero div#content {
   padding: 1rem;
   gap: 1rem;
   z-index: 1;
-  backdrop-filter: blur(1rem);
-  background: rgba(255, 255, 255, 0.25);
 }
 main #hero-header #bg-hero div#content h2 {
   font-family: titreh1;
@@ -291,6 +313,9 @@ main #hero-header #bg-hero div#content h2 {
   font-size: 3rem;
   padding: 1rem;
   font-weight: lighter;
+  backdrop-filter: blur(1rem);
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
 main #hero-header #bg-hero div#content button {
   font-size: 1.5rem;
@@ -362,6 +387,16 @@ main #offre {
   #scroll-top {
     right: 1rem;
     bottom: 4rem;
+  }
+  #bg-hero h1 {
+    font-size: 2.5rem;
+  }
+  #bg-hero h2 {
+    font-size: 1.5rem;
+  }
+  #bg-hero button {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.9rem;
   }
 }
 header {
