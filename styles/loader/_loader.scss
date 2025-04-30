@@ -1,0 +1,42 @@
+#container-loader {
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    background: $degrade;
+    position :fixed;
+    width: 100%;
+    min-height: 100vh;
+    height: 100%
+}
+
+.loader {
+  width: 64px;
+  height: 12px;
+  background:
+    radial-gradient(circle 6px, $bg-color-dark 100%, transparent 0),
+    radial-gradient(circle 6px, $bg-color-dark 100%, transparent 0);
+  background-size:12px 12px;
+  background-position: left center , right center ;
+  background-repeat: no-repeat;
+  position: relative;
+}
+.loader:before {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: $bg-color-light;
+  inset:0;
+  margin: auto;
+  animation: mvX 1.2s, mvY 0.6s;
+  animation-timing-function:cubic-bezier(.5,-300,.5, 300);
+  animation-iteration-count:infinite;
+}
+
+@keyframes mvX {
+    100% { left: 0.85px}
+}
+@keyframes mvY {
+    100% { top : 0.5px }
+}

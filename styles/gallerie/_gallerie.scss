@@ -14,6 +14,14 @@ main {
         min-height: 100vh;
         min-height: calc(var(--vh, 1vh)*100);
 
+        & h1 {
+            font-family: titreh1;
+            text-align: center;
+            font-size: 3rem;
+            padding: 1rem;
+            font-weight: lighter;
+        }
+
         & ul.grid {
             padding: 0;
             column-count: 1;
@@ -64,6 +72,7 @@ main {
     font-size: 2rem;
     font-weight: bold;
     cursor: pointer;
+    z-index: 1;
 }
 
 .close:hover,

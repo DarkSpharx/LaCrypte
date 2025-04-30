@@ -12,6 +12,13 @@ main #gallerie-content {
   min-height: 100vh;
   min-height: calc(var(--vh, 1vh) * 100);
 }
+main #gallerie-content h1 {
+  font-family: titreh1;
+  text-align: center;
+  font-size: 3rem;
+  padding: 1rem;
+  font-weight: lighter;
+}
 main #gallerie-content ul.grid {
   padding: 0;
   column-count: 1;
@@ -55,6 +62,7 @@ main #gallerie-content ul.grid li.image-grid img {
   font-size: 2rem;
   font-weight: bold;
   cursor: pointer;
+  z-index: 1;
 }
 
 .close:hover,
@@ -83,6 +91,51 @@ main #gallerie-content ul.grid li.image-grid img {
 @media only screen and (min-width: 1024px) {
   main #gallerie-content ul.grid {
     column-count: 4;
+  }
+}
+#container-loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(50deg, rgb(79, 28, 100) 0%, rgb(252, 70, 107) 50%, rgb(33, 211, 237) 100%);
+  position: fixed;
+  width: 100%;
+  min-height: 100vh;
+  height: 100%;
+}
+
+.loader {
+  width: 64px;
+  height: 12px;
+  background: radial-gradient(circle 6px, #212121 100%, transparent 0), radial-gradient(circle 6px, #212121 100%, transparent 0);
+  background-size: 12px 12px;
+  background-position: left center, right center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.loader:before {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #ececec;
+  inset: 0;
+  margin: auto;
+  animation: mvX 1.2s, mvY 0.6s;
+  animation-timing-function: cubic-bezier(0.5, -300, 0.5, 300);
+  animation-iteration-count: infinite;
+}
+
+@keyframes mvX {
+  100% {
+    left: 0.85px;
+  }
+}
+@keyframes mvY {
+  100% {
+    top: 0.5px;
   }
 }
 
